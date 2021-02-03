@@ -1,0 +1,449 @@
+:root {
+  --color-highlight: #dba489;
+  --color-dark: #2f2f30;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+}
+
+.wrapper {
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  text-align: right;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 70px;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  &:visited {
+    color: #000;
+    text-decoration: none;
+  }
+  &:hover {
+    color: var(--color-highlight);
+  }
+}
+
+// .header-background {
+//   opacity: 90%;
+// }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  img {
+    height: 50px;
+    padding-left: 10px;
+  }
+  i {
+    font-size: 2rem;
+    padding-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  a {
+    :hover {
+      font-weight: 600;
+      color: var(--color-highlight);
+    }
+  }
+}
+
+.nav__link {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+
+  a {
+    z-index: 999;
+  }
+}
+
+.hidden-mobile {
+  display: none;
+}
+
+.hero {
+  background-image: url("../img/hero-img.jpeg");
+  min-height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+i {
+  padding: 5px;
+  &:hover {
+    color: var(--color-highlight);
+  }
+}
+
+section {
+  margin: 20px 0;
+}
+
+.intro,
+.feature-list,
+.footer {
+  background-color: #20202f;
+  color: #fff;
+  a,
+  i {
+    color: #fff;
+    &:hover {
+      color: var(--color-highlight);
+    }
+  }
+}
+
+.intro-display {
+  display: flex;
+  flex-direction: row;
+  img {
+    width: 50%;
+  }
+}
+
+.features-intro {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+.copyright {
+  font-size: 0.7rem;
+  margin-top: 30px;
+}
+
+// .hide-me {
+//   opacity: 0;
+// }
+.section {
+  z-index: -1;
+}
+
+.section-padding {
+  padding: 20px;
+}
+
+.menu-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  p {
+    margin: 0;
+  }
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 50px;
+  padding: 4px;
+}
+.hidden {
+  // visibility: collapse;
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  // transition: visibility 500ms, opacity 2s linear;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 2s, opacity 2s linear;
+}
+.menu-selectors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.menu-selector {
+  color: var(--color-dark);
+  padding: 15px;
+  font-weight: 600;
+}
+
+.top-arrow {
+  position: fixed;
+  bottom: 50px;
+  background: url("../images/arrow-top.png") no-repeat 0 0;
+  width: 40px;
+  height: 40px;
+  right: 30px;
+  display: none;
+  z-index: 99;
+  background-size: 40px 40px;
+}
+
+.button {
+  background-color: var(--color-highlight);
+  color: #000;
+  width: fit-content;
+  padding: 5px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.social-media {
+  a {
+    &:hover {
+      color: var(--color-dark);
+    }
+  }
+}
+
+.social-media-icons {
+  padding-top: 30px;
+}
+
+iframe {
+  margin: 5px;
+}
+
+/* SLIDE SHOW */
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+  padding: 5px;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 992px) {
+  nav {
+    flex-direction: row;
+    align-items: center;
+
+    i {
+      display: none;
+    }
+  }
+
+  .hidden-mobile {
+    display: block;
+  }
+
+  .hidden-desktop {
+    display: none;
+  }
+
+  .main-menu {
+    text-align: center;
+    a {
+      padding: 0 20px;
+    }
+  }
+
+  .nav__link {
+    font-size: 1rem;
+  }
+
+  .menu-container {
+    column-count: 2;
+  }
+
+  .photo-container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .feature {
+    width: 25%;
+    margin: 0 20px;
+  }
+
+  .social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: right;
+  }
+
+  .contact-info {
+    width: 33%;
+  }
+
+  .social-media {
+    width: 33%;
+  }
+  .maps {
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .social-media-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 0;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .footer-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
